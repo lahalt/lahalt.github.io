@@ -56,18 +56,23 @@
       width: 100vw;
       height: 100vh;
       background: rgba(0,0,0,0.9);
+    
       display: none;
       align-items: center;
       justify-content: center;
+    
+      overflow: auto;
+      padding: 40px 20px;
     }
-
+    
     .lightbox:target {
       display: flex;
     }
-
+    
     .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
     .footer {
