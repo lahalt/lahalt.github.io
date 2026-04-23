@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>らはるとはるとのスケッチブック</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fafafa;
+      color: #111;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h1 { font-size: 28px; }
+    h2 {
+      margin-top: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .grid a {
+      display: block;
+    }
+
+    .grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .grid img:hover {
+      transform: scale(1.03);
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .footer {
+      margin-top: 60px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    a { color: inherit; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>らはるとはると</h1>
+    <p>インターネット落書きマン</p>
+
+    <h2>About</h2>
+    <p>東方Projectのフランドールスカーレットばかり描いている絵描きです</p>
+
+    <h2>作品</h2>
+
+    <div class="grid">
+      <a href="#img1"><img src="image1.jpg" alt=""></a>
+      <a href="#img2"><img src="image2.jpg" alt=""></a>
+      <a href="#img3"><img src="image3.jpg" alt=""></a>
+    </div>
+
+    <!-- ライトボックス -->
+    <div id="img1" class="lightbox">
+      <a href="#"><img src="image1.jpg"></a>
+    </div>
+    <div id="img2" class="lightbox">
+      <a href="#"><img src="image2.jpg"></a>
+    </div>
+    <div id="img3" class="lightbox">
+      <a href="#"><img src="image3.jpg"></a>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 らはるとはると</p>
+    </div>
+
+  </div>
+</body>
+</html>
